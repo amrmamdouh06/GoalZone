@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — GoalZone Football Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">⚽</span>
+        <span class="logo__text">GoalZone</span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="shop.html" class="nav__link nav__link--active shop">Shop</a>
+        <a href="shop.html?cat=shirts" class="nav__link shirts">Shirts</a>
+        <a href="shop.html?cat=boots" class="nav__link boots">Boots</a>
+        <a href="shop.html?cat=training" class="nav__link training">Training</a>
+        <a href="shop.html?cat=accessories" class="nav__link accessories">Accessories</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="search" id="searchInput" placeholder="Search Shirts, boots, teams..." autocomplete="off">
+      </div>
+    </div>
+  </header>
+
+  <main class="shop-page">
+    <div class="container">
+      <div class="page-header">
+        <h1>Shop All</h1>
+        <p id="resultsCount"></p>
+      </div>
+
+      <div class="shop-layout">
+        <aside class="filters" id="filtersPanel">
+          <div class="filters__head">
+            <h3>Filters</h3>
+            <button class="link-btn" id="clearFilters">Clear all</button>
+          </div>
+
+          <div class="filter-group">
+            <h4>Category</h4>
+            <label class="checkbox"><input type="radio" name="category" value="" checked> All</label>
+            <label class="checkbox"><input type="radio" name="category" value="shirts"> Football Shirts</label>
+            <label class="checkbox"><input type="radio" name="category" value="boots"> Boots</label>
+            <label class="checkbox"><input type="radio" name="category" value="training"> Training</label>
+            <label class="checkbox"><input type="radio" name="category" value="accessories"> Accessories</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Team</h4>
+            <select id="teamFilter" class="select">
+              <option value="">All teams</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <h4>Price</h4>
+            <label class="checkbox"><input type="radio" name="price" value="" checked> Any</label>
+            <label class="checkbox"><input type="radio" name="price" value="0-50"> Under $50</label>
+            <label class="checkbox"><input type="radio" name="price" value="50-100"> $50 – $100</label>
+            <label class="checkbox"><input type="radio" name="price" value="100-999"> Over $100</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Sort by</h4>
+            <select id="sortFilter" class="select">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </div>
+        </aside>
+
+        <div class="shop-main">
+          <button class="filters-toggle btn btn--outline" id="filtersToggle">Filters</button>
+          <div class="product-grid" id="productGrid"></div>
+          <p class="empty-state" id="emptyState" hidden>No products match your filters.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close-modal aria-label="Close">&times;</button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <span class="logo__icon">⚽</span>
+          <span class="logo__text">GoalZone</span>
+        </a>
+        <p>Front-end demo store. No real payments or shipping.</p>
+      </div>
+      <div>
+        <h4 style="color:var( --accent)">Shop</h4>
+        <ul>
+          <li><a href="shop.html?cat=shirts">Football Shirts</a></li>
+          <li><a href="shop.html?cat=boots">Boots</a></li>
+          <li><a href="shop.html?cat=training">Training</a></li>
+          <li><a href="shop.html?cat=accessories">Accessories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:var( --accent)">Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:var( --accent)">Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <!-- <p>&copy; 2026 GoalZone.⚽. Amr ELshiekh.</p> -->
+       <p>Designed & Built by <span style="color:var( --accent)" >Amr ElSheikh</span> &nbsp;||&nbsp; <span>&copy; 2026</span> All rights reserved</p>
+      <p>Made with <span style="color:var( --accent) ; font-size: medium;">♥</span> using HTML, CSS AND Javascript</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

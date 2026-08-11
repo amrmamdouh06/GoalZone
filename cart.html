@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart — GoalZone Football Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">⚽</span>
+        <span class="logo__text">GoalZone</span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="shop.html" class="nav__link">Shop</a>
+        <a href="shop.html?cat=shirts" class="nav__link">Shirts</a>
+        <a href="shop.html?cat=boots" class="nav__link">Boots</a>
+        <a href="shop.html?cat=training" class="nav__link">Training</a>
+        <a href="shop.html?cat=accessories" class="nav__link">Accessories</a>
+      </nav>
+      <div class="header__actions">
+        <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="cart-page">
+    <div class="container">
+      <div class="page-header">
+        <h1>Your Cart</h1>
+        <a href="shop.html" class="link-arrow">Continue shopping</a>
+      </div>
+
+      <div class="cart-layout" id="cartLayout">
+        <div class="cart-items" id="cartItems"></div>
+        <aside class="cart-summary" id="cartSummary">
+          <h3>Order Summary</h3>
+          <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+          <div class="summary-row"><span>Shipping</span><span id="shipping">$0.00</span></div>
+          <div class="summary-row summary-row--discount" id="discountRow" hidden>
+            <span>Discount (KICKOFF15)</span><span id="discount">-$0.00</span>
+          </div>
+          <div class="summary-row summary-row--total"><span>Total</span><span id="total">$0.00</span></div>
+
+          <label class="promo-input">
+            <input type="text" id="promoCode" placeholder="Promo code" value="KICKOFF15">
+            <button type="button" class="btn btn--outline btn--sm" id="applyPromo">Apply</button>
+          </label>
+          <p class="promo-hint" id="promoHint"></p>
+
+          <button class="btn btn--primary btn--full" id="checkoutBtn">Checkout (Demo)</button>
+          <p class="cart-note">This is a front-end demo. No payment is processed.</p>
+        </aside>
+      </div>
+
+      <div class="empty-cart" id="emptyCart" hidden>
+        <div class="empty-cart__icon">🛒</div>
+        <h2>Your cart is empty</h2>
+        <p>Add some gear and come back here.</p>
+        <a href="shop.html" class="btn btn--primary">Browse Shop</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--sm" role="dialog">
+      <button class="modal__close" data-close-modal aria-label="Close">&times;</button>
+      <div class="checkout-success">
+        <div class="checkout-success__icon">✓</div>
+        <h2>Order Placed!</h2>
+        <p>Demo checkout complete. In a real store, you'd receive a confirmation email.</p>
+        <a href="shop.html" class="btn btn--primary">Keep Shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__bottom">
+      <!-- <p>&copy; 2026 GoalZone.⚽. Amr ELshiekh.</p> -->
+       <p>Designed & Built by <span style="color:var( --accent)" >Amr ElSheikh</span> &nbsp;||&nbsp; <span>&copy; 2026</span> All rights reserved</p>
+      <p>Made with <span style="color:var( --accent) ; font-size: medium;">♥</span> using HTML, CSS AND Javascript</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoalZone — Football Store</title>
+  <link href="/YOUR_PATH/favicon.ico" rel="icon" type="image/x-icon">
+  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAA2IQw2IQw9ODM2IQw2IQw2IQw2IQw2IQw2IQw2IQyZj4SZj4QSCwMSCwMSCwM2IQw2IQyZj4SZj4Q9ODM9ODMSCwMSCwMSCwMSCwMSCwOZj4SZj4SZj4SZj4Q2IQw2IQw9ODMSCwOZj4QSCwMSCwM9ODOAfnwSCwMSCwMSCwM2IQw2IQwSCwMSCwMSCwM9ODMAAAA9ODOZj4SZj4Q2IQwSCwOAfnyAfnyAfnw2IQwSCwMSCwMSCwNcPBo9ODM9ODMAAAA9ODM9ODOZj4SZj4SZj4QSCwMSCwMSCwM2IQwSCwM2IQxcPBo9ODMAAAAAAAAAAAAAAAA9ODM9ODMSCwMXFhQ2IQwSCwMSCwNcPBpcPBo9ODM9ODM9ODMAAAAAAAAAAAAAAAA9ODM9ODM2IQwXFhRcPBpcPBpcPBpcPBpcPBo9ODM9ODNcPBo9ODMAAAAAAAAAAAAAAAA9ODMSCwMXFhRcPBoSCwMSCwMSCwMSCwM2IQw9ODNcPBpcPBoAAAAAAAAAAAAAAAAAAAASCwMXFhQSCwMSCwMSCwMKCgoKCgo2IQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2IQyZj4Q2IQw2IQw2IQwSCwMSCwM2IQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2IQzUz8kSCwMSCwMSCwMSCwMSCwM2IQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2IQzUz8kPDw7w6N/w6N/w6N/w6N82IQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2IQw9ODMPDw7w6N/w6N/w6N/w6N82IQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2IQyZj4QSCwMSCwMSCwM2IQw2IQw2IQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2IQyZj4QSCwMSCwMSCwM2IQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2IQwSCwOZj4QSCwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAMAAMADAADAAwAA4AkAAPAPAADwDwAA8A8AAPAPAADwDwAA8A8AAPgfAAD8PwAA" rel="icon" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">⚽</span>
+        <span class="logo__text">GoalZone</span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav__link nav__link--active">Home</a>
+        <a href="shop.html" class="nav__link">Shop</a>
+        <a href="shop.html?cat=shirts" class="nav__link">Shirts</a>
+        <a href="shop.html?cat=boots" class="nav__link">Boots</a>
+        <a href="shop.html?cat=training" class="nav__link">Training</a>
+        <a href="shop.html?cat=accessories" class="nav__link">Accessories</a>
+      </nav>
+      
+      <div class="header__actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="search" id="searchInput" placeholder="Search football-shirts, boots, teams..." autocomplete="off">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="container hero__content">
+        <p class="hero__tag">2025/26 Season Collection</p>
+        <h1 class="hero__title">Wear Your<br><span>Passion</span></h1>
+        <p class="hero__desc">Official-style Shirts, pro boots, and fan gear from the world's greatest clubs and nations.</p>
+        <div class="hero__cta">
+          <a href="shop.html" class="btn btn--primary">Shop Now</a>
+          <a href="shop.html?cat=shirts" class="btn btn--outline">Browse Shirts</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <strong>120+</strong>
+            <span>Products</span>
+          </div>
+          <div class="stat">
+            <strong>30+</strong>
+            <span>Teams</span>
+          </div>
+          <div class="stat">
+            <strong>Free</strong>
+            <span>Shipping $75+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Shop by Category</h2>
+          <a href="shop.html" class="link-arrow">View all</a>
+        </div>
+        <div class="categories">
+          <a href="shop.html?cat=shirts" class="category-card category-card--football-shirts">
+            <span class="category-card__label"> Shirts</span>
+            <!-- <span class="category-card__count">48 items</span> -->
+          </a>
+          <a href="shop.html?cat=boots" class="category-card category-card--boots">
+            <span class="category-card__label">Boots</span>
+            <!-- <span class="category-card__count">32 items</span> -->
+          </a>
+          <a href="shop.html?cat=training" class="category-card category-card--training">
+            <span class="category-card__label">Training</span>
+            <!-- <span class="category-card__count">24 items</span> -->
+          </a>
+          <a href="shop.html?cat=accessories" class="category-card category-card--accessories">
+            <span class="category-card__label">Accessories</span>
+            <!-- <span class="category-card__count">16 items</span> -->
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section__head">
+          <h2>Featured Products</h2>
+          <a href="shop.html" class="link-arrow">Shop all</a>
+        </div>
+        <div class="product-grid" id="featuredProducts"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Top Clubs</h2>
+        </div>
+        <div class="clubs">
+          <!-- <a href="shop.html?team=Al Ahly" class="club-badge club-badge--ahly">Al Ahly</a> -->
+          <!-- <a href="shop.html?team=Zamalek" class="club-badge club-badge--zamalek">Zamalek</a> -->
+          <!-- <a href="shop.html?team=Egypt" class="club-badge club-badge--egypt">Egypt</a> -->
+          <a href="shop.html?team=Real Madrid" class="club-badge">Real Madrid</a>
+          <a href="shop.html?team=Barcelona" class="club-badge">Barcelona</a>
+          <a href="shop.html?team=Manchester City" class="club-badge">Man City</a>
+          <a href="shop.html?team=Liverpool" class="club-badge">Liverpool</a>
+          <a href="shop.html?team=Germany national team" class="club-badge">Germany</a>
+          <a href="shop.html?team=PSG" class="club-badge">PSG</a>
+          <a href="shop.html?team=Arsenal" class="club-badge">Arsenal</a>
+          <a href="shop.html?team=Japan National Team" class="club-badge">Japan</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo">
+      <div class="container promo__inner">
+        <div class="promo__text">
+          <h2>Match Day Ready</h2>
+          <p>Get 15% off your first order. Use code <strong>KICKOFF15</strong> at checkout.</p>
+        </div>
+        <a href="shop.html" class="btn btn--primary">Start Shopping</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <span class="logo__icon">⚽</span>
+          <span class="logo__text">GoalZone</span>
+        </a>
+        <p>Front-end demo store. No real payments or shipping.</p>
+      </div>
+      <div>
+        <h4 style="color:var( --accent)">Shop</h4>
+        <ul>
+          <li><a href="shop.html?cat=shirts">Football Shirts</a></li>
+          <li><a href="shop.html?cat=boots">Boots</a></li>
+          <li><a href="shop.html?cat=training">Training</a></li>
+          <li><a href="shop.html?cat=accessories">Accessories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:var( --accent)">Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:var( --accent)">Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <!-- <p>&copy; 2026 GoalZone⚽</p> -->
+      <p>Designed & Built by <span style="color:var( --accent)" >Amr ElSheikh</span> &nbsp;||&nbsp; <span>&copy; 2026</span> All rights reserved</p>
+      <p>Made with <span style="color:var( --accent) ; font-size: medium;">♥</span> using HTML, CSS AND Javascript</p>
+    </div>
+  </footer>
+
+  <!-- 
+  <footer>
+  <div class="container">
+    <span style="color:var( --accent)">♥</span>
+  </div>
+ 
+</footer> -->
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
